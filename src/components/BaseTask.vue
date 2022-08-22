@@ -21,6 +21,7 @@
         :value="task.title"
         :id="'title-' + task.id"
         name="title"
+        style="background: red"
         placeholder="Input title"
       />
     </label>
