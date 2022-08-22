@@ -1,12 +1,12 @@
-import Task from './Task.vue';
+import BaseTask from './BaseTask.vue';
 
 import { action } from '@storybook/addon-actions';
 
 export default {
-  component: Task,
+  component: BaseTask,
   //👇 Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
-  title: 'Task',
+  title: 'BaseTask',
   //👇 Our events will be mapped in Storybook UI
   argTypes: {
     onPinTask: {},
@@ -20,11 +20,11 @@ export const actionsData = {
 };
 
 const Template = args => ({
-  components: { Task },
+  components: { BaseTask },
   setup() {
     return { args, ...actionsData };
   },
-  template: '<Task v-bind="args" />',
+  template: '<BaseTask v-bind="args" />',
 });
 
 export const Default = Template.bind({});
